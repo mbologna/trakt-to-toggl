@@ -51,8 +51,8 @@ jobs:
         file: ./app/Dockerfile
         platforms: linux/amd64,linux/arm64
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/docker-bitlbee:latest
-          ghcr.io/${{ github.repository_owner }}/docker-bitlbee:latest
+          ${{ secrets.DOCKER_USERNAME }}/trakt-to-toggl:latest
+          ghcr.io/${{ github.repository_owner }}/trakt-to-toggl:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
         push: ${{ github.event_name != 'pull_request' }}
