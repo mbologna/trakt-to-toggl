@@ -50,8 +50,8 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v4
       with:
-        context: .
-        file: ./app/Dockerfile
+        context: ./app
+        file: Dockerfile
         platforms: linux/amd64,linux/arm64
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/trakt-to-toggl:latest
